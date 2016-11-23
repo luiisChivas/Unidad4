@@ -29,7 +29,7 @@ public class CarroController {
 	
 	@GetMapping("/new-car")
 	public String newCar(HttpServletRequest request){
-		request.setAttribute("mode", "MODE_NEW_CAR");
+		request.setAttribute("mode", "MODE_NEW");
 		return "carro";
 	}
 	
@@ -44,7 +44,7 @@ public class CarroController {
 	@GetMapping("/update-car")
 	public String updateCar(@RequestParam int id, HttpServletRequest request){
 		request.setAttribute("car", carroService.findOne(id));
-		request.setAttribute("mode", "MODE_UPDATE_CAR");
+		request.setAttribute("mode", "MODE_UPDATE");
 		return "carro";
 	}
 	

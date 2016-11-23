@@ -29,7 +29,7 @@ public class ActivityController {
 	
 	@GetMapping("/new-activity")
 	public String newActivity(HttpServletRequest request){
-		request.setAttribute("mode", "MODE_NEW_ACTIVITY");
+		request.setAttribute("mode", "MODE_NEW");
 		return "activity";
 	}
 	
@@ -44,7 +44,7 @@ public class ActivityController {
 	@GetMapping("/update-activity")
 	public String updateActivity(@RequestParam int id, HttpServletRequest request){
 		request.setAttribute("activity", activityService.findOne(id));
-		request.setAttribute("mode", "MODE_UPDATE_ACTIVITY");
+		request.setAttribute("mode", "MODE_UPDATE");
 		return "activity";
 	}
 	

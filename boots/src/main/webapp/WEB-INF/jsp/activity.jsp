@@ -76,7 +76,7 @@
 				</div>
 			</div>
 		</c:when>
-		<c:when test="${mode=='MODE_NEW_ACTIVITY' || mode=='MODE_UPDATE_ACTIVITY'}">
+		<c:when test="${mode=='MODE_NEW' || mode=='MODE_UPDATE'}">
 			<div class="container text-center">
 				<h3>Manage Activity</h3>
 				<hr />
